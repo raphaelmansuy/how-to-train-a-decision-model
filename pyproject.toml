@@ -35,7 +35,7 @@ train = [
   "onnxruntime==1.31.0",
   "onnxscript==0.7.2",
 ]
-dev = ["pytest==8.4.2"]
+dev = ["pytest==9.0.3"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
