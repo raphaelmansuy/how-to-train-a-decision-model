@@ -1,0 +1,37 @@
+{
+  "model": "sentence-transformers/paraphrase-MiniLM-L3-v2",
+  "revision": "4ca70771034acceecb2e72475f72050fcdde4ddc",
+  "train_rows": 48,
+  "test_rows_inferred": 2379,
+  "note": "Test probabilities only. SetFit is not in the threshold comparison.",
+  "run": {
+    "job": "setfit",
+    "git_commit": "fb65a1435ac879b33da4201ac0405462996efd26",
+    "python": "3.12.1",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.31",
+    "libraries": {
+      "torch": "2.14.1",
+      "transformers": "5.19.0",
+      "datasets": "5.1.0",
+      "scikit-learn": "1.9.1",
+      "pandas": "3.0.6",
+      "numpy": "2.5.3",
+      "setfit": "1.2.0",
+      "sentence-transformers": "6.1.0",
+      "trl": "1.15.0",
+      "peft": "0.21.2",
+      "accelerate": "1.15.0",
+      "huggingface_hub": "1.33.0",
+      "tokenizers": "0.23.2",
+      "onnx": "1.23.2",
+      "onnxruntime": "1.31.0",
+      "onnxscript": "0.7.2"
+    },
+    "hardware": {
+      "requested_gpu": "L4",
+      "cuda": true,
+      "gpu_name": "NVIDIA L4"
+    },
+    "contract_version": "1.0.0"
+  }
+}

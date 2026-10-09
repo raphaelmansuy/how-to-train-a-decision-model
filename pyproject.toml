@@ -1,0 +1,45 @@
+[project]
+name = "bank-routing"
+version = "1.0.0"
+description = "Bank message routing decision model"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy==2.5.3",
+  "pandas==3.0.6",
+  "scikit-learn==1.9.1",
+  "pyyaml==6.0.2",
+  "jsonschema==4.25.1",
+  "fastapi==0.119.0",
+  "uvicorn==0.37.0",
+  "httpx==0.28.1",
+]
+
+[project.optional-dependencies]
+serve = [
+  "onnxruntime==1.31.0",
+  "transformers==5.19.0",
+  "tokenizers==0.23.2",
+]
+train = [
+  "torch==2.14.1",
+  "transformers==5.19.0",
+  "datasets==5.1.0",
+  "setfit==1.2.0",
+  "sentence-transformers==6.1.0",
+  "trl==1.15.0",
+  "peft==0.21.2",
+  "accelerate==1.15.0",
+  "huggingface_hub==1.33.0",
+  "tokenizers==0.23.2",
+  "onnx==1.23.2",
+  "onnxruntime==1.31.0",
+  "onnxscript==0.7.2",
+]
+dev = ["pytest==8.4.2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

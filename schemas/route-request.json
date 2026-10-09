@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.internal/schemas/route-request/1.0.0",
+  "title": "RouteRequest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["message_id", "text"],
+  "properties": {
+    "message_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "text": {"type": "string", "minLength": 1, "maxLength": 2000},
+    "channel": {"type": "string", "enum": ["chat", "email", "app", "web_form", "other"]},
+    "locale": {"type": "string", "pattern": "^[a-z]{2}(-[A-Z]{2})?$"},
+    "received_at": {"type": "string", "format": "date-time"}
+  }
+}

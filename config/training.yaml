@@ -1,0 +1,163 @@
+# Training settings from the spec, Appendix C, plus the Modal GPU overrides.
+# Overrides are a logged deviation from the CPU demo (TRN-06).
+
+data:
+  source: "Banking77 (PolyAI, CC-BY-4.0, arXiv 2003.04807)"
+  train_url: "https://raw.githubusercontent.com/PolyAI-LDN/task-specific-datasets/master/banking_data/train.csv"
+  test_url: "https://raw.githubusercontent.com/PolyAI-LDN/task-specific-datasets/master/banking_data/test.csv"
+  raw_sha256:
+    banking77_train.csv: "b06e26ac675513959a63135f11b94ea7786ed02da65db93a5650d8838cbc664b"
+    banking77_test.csv: "d12d6e3bc4c3103966ae786dc435913c0c563dfa328f5a3646d0e62cfeeb474d"
+  seed: 42
+  normalise_regex: "[^a-z0-9 ]"
+  near_duplicate:
+    analyzer: char_wb
+    ngram_range: [3, 5]
+    min_df: 1
+    cosine_threshold: 0.90
+  split:
+    train: 3000
+    val: 1000
+    stratify: label
+    random_state: 42
+
+baseline_tfidf:
+  word:
+    ngram_range: [1, 2]
+    sublinear_tf: true
+    min_df: 1
+  char:
+    analyzer: char_wb
+    ngram_range: [3, 5]
+    sublinear_tf: true
+    min_df: 2
+  logistic_regression:
+    C: 10
+    max_iter: 2000
+    class_weight: balanced
+
+baseline_zero_shot:
+  model: Qwen/Qwen3-0.6B
+  revision: c1899de289a04d12100db370d81485cdf75e47ca
+  dtype: float32
+  seed: 0
+  logit_read:
+    batch_size: 16
+    padding_side: left
+  free_generation_sample:
+    n: 200
+    batch: 20
+    max_new_tokens: 8
+    do_sample: false
+    enable_thinking: false
+
+route_a:
+  model: answerdotai/ModernBERT-base
+  revision: 8949b909ec900327062f0ebf497f51aef5e6f0c8
+  max_length: 64
+  training_arguments:
+    num_train_epochs: 2
+    learning_rate: 5.0e-5
+    per_device_train_batch_size: 32
+    per_device_eval_batch_size: 64
+    weight_decay: 0.01
+    warmup_steps: 0.1
+    eval_strategy: epoch
+    save_strategy: epoch
+    load_best_model_at_end: true
+    metric_for_best_model: macro_f1
+    save_total_limit: 1
+    logging_steps: 20
+    report_to: none
+    seed: 42
+    use_cpu: false
+    bf16: true
+
+route_b:
+  model: Qwen/Qwen3-0.6B
+  revision: c1899de289a04d12100db370d81485cdf75e47ca
+  train_examples: 240
+  train_random_state: 42
+  lora:
+    r: 16
+    lora_alpha: 32
+    lora_dropout: 0.05
+    target_modules: all-linear
+    task_type: CAUSAL_LM
+  sft_config:
+    max_steps: 60
+    per_device_train_batch_size: 4
+    learning_rate: 2.0e-4
+    lr_scheduler_type: cosine
+    warmup_steps: 0.05
+    logging_steps: 10
+    save_strategy: "no"
+    bf16: true
+    gradient_checkpointing: false
+    max_length: 192
+    report_to: none
+    use_cpu: false
+    seed: 42
+  cpu_loss_override: false
+  eval_subset:
+    val: 300
+    test: 600
+    random_state: 0
+  logit_read:
+    batch_size: 16
+    padding_side: left
+
+setfit:
+  model: sentence-transformers/paraphrase-MiniLM-L3-v2
+  revision: 4ca70771034acceecb2e72475f72050fcdde4ddc
+  num_samples_per_label: 8
+  training_arguments:
+    batch_size: 32
+    num_epochs: 1
+    num_iterations: 20
+    seed: 42
+
+calibration:
+  method: temperature_scaling
+  grid:
+    start: 0.25
+    stop: 5.0
+    num: 96
+  refine:
+    half_width: 0.1
+    num: 41
+    floor: 0.05
+  ece_bins: 15
+  reliability_bins: 10
+
+threshold:
+  start: 0.0
+  stop: 1.0
+  step: 0.01
+  objective: min cost_per_ticket on validation, tie-break max coverage
+
+serving:
+  runtime: onnxruntime
+  providers: [CPUExecutionProvider]
+  truncation: true
+  max_length: 64
+  threads: 4
+  parity:
+    messages: 300
+    max_abs_logit_diff: 1.0e-3
+    argmax_agreement: 1.0
+  server_timeout_ms: 150
+  max_text_chars: 2000
+  max_body_bytes: 16384
+
+monitoring:
+  psi:
+    eps: 1.0e-4
+    warn: 0.10
+    alert: 0.25
+  random_audit_rate: 0.02
+  audit_rng_seed: 0
+
+gpu_overrides:
+  reason: "Trained on a Modal L4 GPU. The demo in the spec used CPU (use_cpu true, bf16 false, CPUSFTTrainer). This change is recorded in the decision log (TRN-06)."
+  gpu: L4

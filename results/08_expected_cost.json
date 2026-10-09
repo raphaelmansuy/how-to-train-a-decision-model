@@ -1,0 +1,186 @@
+{
+  "rule": "expected_cost",
+  "costs": {
+    "human": 0.2,
+    "wrong_queue": 1.0,
+    "missed_fraud": 5.0
+  },
+  "confidence_cutoff": 0.86,
+  "fitted_parameter": null,
+  "note": "Send to the top queue only when its expected cost is strictly below the cost of a person. Expected cost uses the contract costs and the calibrated probabilities. The test set was scored once under this rule and was not used to choose it.",
+  "models": {
+    "modernbert": {
+      "validation": {
+        "n": 1000,
+        "rule": "expected_cost",
+        "threshold": null,
+        "auto_route_rate": 0.835,
+        "accepted_error": 0.020359,
+        "missed_fraud": 1,
+        "fraud_total": 98,
+        "missed_fraud_rate": 0.010204,
+        "fraud_catch_rate": 0.989796,
+        "cost_per_ticket": 0.054,
+        "counts": {
+          "handoff": 165,
+          "wrong": 16,
+          "missed_fraud": 1,
+          "correct": 818,
+          "n": 1000
+        },
+        "human_cost": 0.2,
+        "mean_expected_cost_of_top": 0.109205,
+        "unconstrained_non_top_sends": 0
+      },
+      "test": {
+        "n": 2379,
+        "rule": "expected_cost",
+        "threshold": null,
+        "auto_route_rate": 0.824716,
+        "accepted_error": 0.018349,
+        "missed_fraud": 1,
+        "fraud_total": 235,
+        "missed_fraud_rate": 0.004255,
+        "fraud_catch_rate": 0.995745,
+        "cost_per_ticket": 0.051871,
+        "counts": {
+          "handoff": 417,
+          "wrong": 35,
+          "missed_fraud": 1,
+          "correct": 1926,
+          "n": 2379
+        },
+        "human_cost": 0.2,
+        "mean_expected_cost_of_top": 0.129459,
+        "unconstrained_non_top_sends": 0
+      }
+    },
+    "tfidf": {
+      "validation": {
+        "n": 1000,
+        "rule": "expected_cost",
+        "threshold": null,
+        "auto_route_rate": 0.739,
+        "accepted_error": 0.010825,
+        "missed_fraud": 2,
+        "fraud_total": 98,
+        "missed_fraud_rate": 0.020408,
+        "fraud_catch_rate": 0.979592,
+        "cost_per_ticket": 0.0682,
+        "counts": {
+          "handoff": 261,
+          "wrong": 6,
+          "missed_fraud": 2,
+          "correct": 731,
+          "n": 1000
+        },
+        "human_cost": 0.2,
+        "mean_expected_cost_of_top": 0.181854,
+        "unconstrained_non_top_sends": 0
+      },
+      "test": {
+        "n": 2379,
+        "rule": "expected_cost",
+        "threshold": null,
+        "auto_route_rate": 0.716688,
+        "accepted_error": 0.008211,
+        "missed_fraud": 1,
+        "fraud_total": 235,
+        "missed_fraud_rate": 0.004255,
+        "fraud_catch_rate": 0.995745,
+        "cost_per_ticket": 0.064229,
+        "counts": {
+          "handoff": 674,
+          "wrong": 13,
+          "missed_fraud": 1,
+          "correct": 1691,
+          "n": 2379
+        },
+        "human_cost": 0.2,
+        "mean_expected_cost_of_top": 0.192693,
+        "unconstrained_non_top_sends": 0
+      }
+    }
+  },
+  "cutoff_comparison": {
+    "confidence_cutoff": 0.86,
+    "test_rows_cutoff_would_send_and_expected_cost_holds": 80,
+    "test_rows_expected_cost_sends_and_cutoff_would_hold": 34
+  },
+  "confidence_cutoff_test": {
+    "n": 2379,
+    "rule": "confidence_threshold",
+    "threshold": 0.86,
+    "auto_route_rate": 0.844052,
+    "accepted_error": 0.019422,
+    "missed_fraud": 5,
+    "fraud_total": 235,
+    "missed_fraud_rate": 0.021277,
+    "fraud_catch_rate": 0.978723,
+    "cost_per_ticket": 0.05599,
+    "counts": {
+      "handoff": 371,
+      "wrong": 34,
+      "missed_fraud": 5,
+      "correct": 1969,
+      "n": 2379
+    }
+  },
+  "gates": [
+    {
+      "gate": "G1",
+      "pass": false,
+      "detail": "Business sign-off of sections 1 to 3 is still open."
+    },
+    {
+      "gate": "G2",
+      "pass": true,
+      "detail": "Unchanged. Validation and test still do not share copies."
+    },
+    {
+      "gate": "G3",
+      "pass": true,
+      "detail": "expected-cost 0.0519; cap 0.07 met; TF-IDF confidence-cutoff cost 0.0525; TF-IDF expected-cost 0.0642."
+    },
+    {
+      "gate": "G4",
+      "pass": true,
+      "detail": "missed fraud rate 0.004255, catch 0.995745, top-1 fraud recall 0.928"
+    },
+    {
+      "gate": "G5",
+      "pass": true,
+      "detail": "Top-1 recall is unchanged by the hand-off rule: cards 0.936, transfers 0.951, cash 0.932, fees 0.943, account 0.967"
+    },
+    {
+      "gate": "G6",
+      "pass": true,
+      "detail": "macro-F1 0.9411 is a property of the top label, not the hand-off."
+    },
+    {
+      "gate": "G7",
+      "pass": true,
+      "detail": "ECE 0.0124 is unchanged. Temperature was already fitted on validation."
+    },
+    {
+      "gate": "G8",
+      "pass": true,
+      "detail": "auto-route 0.8247, accepted error 0.018349"
+    },
+    {
+      "gate": "G9",
+      "pass": true,
+      "detail": "ONNX parity is unchanged. The hand-off runs after the model scores."
+    },
+    {
+      "gate": "G10",
+      "pass": true,
+      "detail": "Unchanged from the first experiment. The hand-off rule does not refit the length slices."
+    },
+    {
+      "gate": "G11",
+      "pass": false,
+      "detail": "ML lead and risk owner approval is still open."
+    }
+  ]
+}

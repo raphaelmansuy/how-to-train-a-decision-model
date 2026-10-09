@@ -1,0 +1,47 @@
+{
+  "parity": {
+    "n": 300,
+    "max_abs_logit_diff": 0.00010776519775390625,
+    "argmax_agreement": 1.0,
+    "pass": true
+  },
+  "latency": {
+    "n": 300,
+    "p50_ms": 19.038424500010365,
+    "p95_ms": 30.229502399988924,
+    "threads": 4
+  },
+  "psi_validation_vs_test": 0.009283932942800702,
+  "psi_simulated_fraud_cards_shift": 2.289656453036472,
+  "relabel_rows": 423,
+  "g9_pass": true,
+  "run": {
+    "job": "ship",
+    "git_commit": "fb65a1435ac879b33da4201ac0405462996efd26",
+    "python": "3.12.1",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.31",
+    "libraries": {
+      "torch": "2.14.1",
+      "transformers": "5.19.0",
+      "datasets": "5.1.0",
+      "scikit-learn": "1.9.1",
+      "pandas": "3.0.6",
+      "numpy": "2.5.3",
+      "setfit": "1.2.0",
+      "sentence-transformers": "6.1.0",
+      "trl": "1.15.0",
+      "peft": "0.21.2",
+      "accelerate": "1.15.0",
+      "huggingface_hub": "1.33.0",
+      "tokenizers": "0.23.2",
+      "onnx": "1.23.2",
+      "onnxruntime": "1.31.0",
+      "onnxscript": "0.7.2"
+    },
+    "hardware": {
+      "requested_gpu": "cpu",
+      "cuda": false
+    },
+    "contract_version": "1.0.0"
+  }
+}

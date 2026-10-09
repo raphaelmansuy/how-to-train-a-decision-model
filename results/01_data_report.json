@@ -1,0 +1,133 @@
+{
+  "raw_train_rows": 10003,
+  "raw_test_rows": 3080,
+  "exact_duplicates_removed_from_train": 7,
+  "deduplicated_train_rows": 9996,
+  "unused_train_rows": 5996,
+  "exact_train_test_overlaps_removed": 9,
+  "near_duplicates_removed": 692,
+  "near_duplicate_examples": [
+    {
+      "test_text": "Why was my cash withdrawal declined?",
+      "train_text": "My cash withdrawal was declined.  Why?",
+      "similarity": 1.0000000000000004
+    },
+    {
+      "test_text": "Why has my card payment been declined?",
+      "train_text": "My card payment has been declined, why?",
+      "similarity": 1.0000000000000004
+    },
+    {
+      "test_text": "how come my transfer didn't work",
+      "train_text": "My transfer didn't work how come?",
+      "similarity": 1.0000000000000002
+    },
+    {
+      "test_text": "I don't live in the UK.  Can I still get a card?",
+      "train_text": "I don't live in the UK. Can I still get a card?",
+      "similarity": 1.0000000000000002
+    },
+    {
+      "test_text": "Why can't I verify my id?",
+      "train_text": "I can't verify my ID. Why?",
+      "similarity": 1.0000000000000002
+    }
+  ],
+  "val_test_exact_overlaps": 0,
+  "val_test_near_duplicates": 0,
+  "max_val_test_similarity": 0.8978216003314515,
+  "train_test_near_duplicates": 0,
+  "max_train_test_similarity": 0.8994283636230241,
+  "split_sizes": {
+    "train": 3000,
+    "val": 1000,
+    "test": 2379
+  },
+  "class_balance": {
+    "train": {
+      "cards": 689,
+      "transfers": 664,
+      "cash": 531,
+      "fees": 520,
+      "account": 304,
+      "fraud": 292
+    },
+    "val": {
+      "cards": 230,
+      "transfers": 221,
+      "cash": 177,
+      "fees": 173,
+      "account": 101,
+      "fraud": 98
+    },
+    "test": {
+      "cards": 625,
+      "transfers": 467,
+      "cash": 411,
+      "fees": 402,
+      "account": 239,
+      "fraud": 235
+    }
+  },
+  "seed": 42,
+  "near_duplicate_threshold": 0.9,
+  "checksums": {
+    "banking77_train.csv": "b06e26ac675513959a63135f11b94ea7786ed02da65db93a5650d8838cbc664b",
+    "banking77_test.csv": "d12d6e3bc4c3103966ae786dc435913c0c563dfa328f5a3646d0e62cfeeb474d",
+    "train.csv": "d8f81d9018615f275eedba02ba4e8785374ac4ad181b2959df9ccdd4d6f82263",
+    "val.csv": "e2c64fc240c159f6ffd822cb3a3fe40f76aad9fe7d4759d611151676bfb0ff67",
+    "test.csv": "27159333df8dca17c20b202d7a1d3737f3d96d9381a4f36fa49864caea909426"
+  },
+  "contract_version": "1.0.0",
+  "run": {
+    "job": "prepare_data",
+    "git_commit": "fb65a1435ac879b33da4201ac0405462996efd26",
+    "python": "3.12.1",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.31",
+    "libraries": {
+      "torch": "2.14.1",
+      "transformers": "5.19.0",
+      "datasets": "5.1.0",
+      "scikit-learn": "1.9.1",
+      "pandas": "3.0.6",
+      "numpy": "2.5.3",
+      "setfit": "1.2.0",
+      "sentence-transformers": "6.1.0",
+      "trl": "1.15.0",
+      "peft": "0.21.2",
+      "accelerate": "1.15.0",
+      "huggingface_hub": "1.33.0",
+      "tokenizers": "0.23.2",
+      "onnx": "1.23.2",
+      "onnxruntime": "1.31.0",
+      "onnxscript": "0.7.2"
+    },
+    "hardware": {},
+    "config_data": {
+      "source": "Banking77 (PolyAI, CC-BY-4.0, arXiv 2003.04807)",
+      "train_url": "https://raw.githubusercontent.com/PolyAI-LDN/task-specific-datasets/master/banking_data/train.csv",
+      "test_url": "https://raw.githubusercontent.com/PolyAI-LDN/task-specific-datasets/master/banking_data/test.csv",
+      "raw_sha256": {
+        "banking77_train.csv": "b06e26ac675513959a63135f11b94ea7786ed02da65db93a5650d8838cbc664b",
+        "banking77_test.csv": "d12d6e3bc4c3103966ae786dc435913c0c563dfa328f5a3646d0e62cfeeb474d"
+      },
+      "seed": 42,
+      "normalise_regex": "[^a-z0-9 ]",
+      "near_duplicate": {
+        "analyzer": "char_wb",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "min_df": 1,
+        "cosine_threshold": 0.9
+      },
+      "split": {
+        "train": 3000,
+        "val": 1000,
+        "stratify": "label",
+        "random_state": 42
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "model": "answerdotai/ModernBERT-base",
+  "revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8",
+  "train_metrics": {
+    "train_runtime": 32.4066,
+    "train_samples_per_second": 185.148,
+    "train_steps_per_second": 5.801,
+    "total_flos": 185377408745472.0,
+    "train_loss": 0.42570157253995855,
+    "epoch": 2.0
+  },
+  "validation_macro_f1": 0.9402950554128622,
+  "saved_to": "/artifacts/models/encoder/best",
+  "gpu_override": "use_cpu false, bf16 true, compared with the CPU demo",
+  "run": {
+    "job": "route_a",
+    "git_commit": "fb65a1435ac879b33da4201ac0405462996efd26",
+    "python": "3.12.1",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.31",
+    "libraries": {
+      "torch": "2.14.1",
+      "transformers": "5.19.0",
+      "datasets": "5.1.0",
+      "scikit-learn": "1.9.1",
+      "pandas": "3.0.6",
+      "numpy": "2.5.3",
+      "setfit": "1.2.0",
+      "sentence-transformers": "6.1.0",
+      "trl": "1.15.0",
+      "peft": "0.21.2",
+      "accelerate": "1.15.0",
+      "huggingface_hub": "1.33.0",
+      "tokenizers": "0.23.2",
+      "onnx": "1.23.2",
+      "onnxruntime": "1.31.0",
+      "onnxscript": "0.7.2"
+    },
+    "hardware": {
+      "requested_gpu": "L4",
+      "cuda": true,
+      "gpu_name": "NVIDIA L4"
+    },
+    "contract_version": "1.0.0",
+    "seed": 42
+  }
+}

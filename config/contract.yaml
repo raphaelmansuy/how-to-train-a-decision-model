@@ -1,0 +1,130 @@
+version: "1.0.0"
+handoff_route: needs_human
+labels:
+  - cards
+  - transfers
+  - cash
+  - fees
+  - account
+  - fraud
+owners:
+  version:
+    role: ML lead
+    status: engineering_draft
+  labels:
+    role: Business owner
+    status: unapproved
+  label_order:
+    role: ML lead
+    status: engineering_draft
+  handoff_route:
+    role: Business owner
+    status: unapproved
+  queue_scope:
+    role: Business owner
+    status: unapproved
+  intent_mapping:
+    role: Business owner
+    status: unapproved
+  costs:
+    role: Business owner
+    status: illustrative_unapproved
+  temperature:
+    role: ML lead
+    status: fitted_on_validation
+  threshold:
+    role: Business owner
+    status: chosen_on_validation_pending_approval
+queue_scope:
+  cards: "Card delivery, activation, PIN, card not working, virtual or physical cards"
+  transfers: "Bank transfers, card payments, refunds, pending or declined payments"
+  cash: "Top-ups, ATM and cash withdrawals, cheque or cash deposits"
+  fees: "Fees, charges and exchange rates"
+  account: "Identity checks, personal details, passcode, closing the account"
+  fraud: "Unrecognised transactions, lost or stolen card or phone, compromised card"
+costs:
+  human: 0.2
+  wrong_queue: 1.0
+  missed_fraud: 5.0
+temperature:
+  value: null
+threshold:
+  value: null
+intent_mapping:
+  activate_my_card: cards
+  card_about_to_expire: cards
+  card_acceptance: cards
+  card_arrival: cards
+  card_delivery_estimate: cards
+  card_linking: cards
+  card_not_working: cards
+  card_swallowed: cards
+  change_pin: cards
+  contactless_not_working: cards
+  disposable_card_limits: cards
+  get_disposable_virtual_card: cards
+  get_physical_card: cards
+  getting_spare_card: cards
+  getting_virtual_card: cards
+  order_physical_card: cards
+  pin_blocked: cards
+  virtual_card_not_working: cards
+  visa_or_mastercard: cards
+  supported_cards_and_currencies: cards
+  apple_pay_or_google_pay: cards
+  balance_not_updated_after_bank_transfer: transfers
+  beneficiary_not_allowed: transfers
+  cancel_transfer: transfers
+  declined_transfer: transfers
+  failed_transfer: transfers
+  pending_transfer: transfers
+  receiving_money: transfers
+  transfer_into_account: transfers
+  transfer_not_received_by_recipient: transfers
+  transfer_timing: transfers
+  declined_card_payment: transfers
+  pending_card_payment: transfers
+  reverted_card_payment?: transfers
+  Refund_not_showing_up: transfers
+  request_refund: transfers
+  atm_support: cash
+  automatic_top_up: cash
+  balance_not_updated_after_cheque_or_cash_deposit: cash
+  declined_cash_withdrawal: cash
+  pending_cash_withdrawal: cash
+  pending_top_up: cash
+  top_up_by_cash_or_cheque: cash
+  top_up_failed: cash
+  top_up_limits: cash
+  top_up_reverted: cash
+  topping_up_by_card: cash
+  verify_top_up: cash
+  wrong_amount_of_cash_received: cash
+  card_payment_fee_charged: fees
+  card_payment_wrong_exchange_rate: fees
+  cash_withdrawal_charge: fees
+  exchange_charge: fees
+  exchange_rate: fees
+  exchange_via_app: fees
+  extra_charge_on_statement: fees
+  fiat_currency_support: fees
+  top_up_by_bank_transfer_charge: fees
+  top_up_by_card_charge: fees
+  transfer_fee_charged: fees
+  wrong_exchange_rate_for_cash_withdrawal: fees
+  age_limit: account
+  country_support: account
+  edit_personal_details: account
+  passcode_forgotten: account
+  terminate_account: account
+  unable_to_verify_identity: account
+  verify_my_identity: account
+  why_verify_identity: account
+  verify_source_of_funds: account
+  card_payment_not_recognised: fraud
+  cash_withdrawal_not_recognised: fraud
+  compromised_card: fraud
+  direct_debit_payment_not_recognised: fraud
+  lost_or_stolen_card: fraud
+  lost_or_stolen_phone: fraud
+  transaction_charged_twice: fraud

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.internal/schemas/route-decision/1.0.0",
+  "title": "RouteDecision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["route", "label", "confidence", "probabilities", "threshold"],
+  "properties": {
+    "route": {
+      "type": "string",
+      "enum": ["cards", "transfers", "cash", "fees", "account", "fraud", "needs_human"]
+    },
+    "label": {
+      "type": ["string", "null"],
+      "enum": ["cards", "transfers", "cash", "fees", "account", "fraud", null]
+    },
+    "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "probabilities": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["cards", "transfers", "cash", "fees", "account", "fraud"],
+      "properties": {
+        "cards": {"type": "number", "minimum": 0, "maximum": 1},
+        "transfers": {"type": "number", "minimum": 0, "maximum": 1},
+        "cash": {"type": "number", "minimum": 0, "maximum": 1},
+        "fees": {"type": "number", "minimum": 0, "maximum": 1},
+        "account": {"type": "number", "minimum": 0, "maximum": 1},
+        "fraud": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "threshold": {"type": "number", "minimum": 0, "maximum": 1},
+    "decision_rule": {"type": "string", "enum": ["expected_cost"]},
+    "expected_cost": {"type": "number", "minimum": 0},
+    "reason": {
+      "type": "string",
+      "enum": ["auto_routed", "below_threshold", "expected_cost", "model_error", "timeout", "invalid_input", "kill_switch"]
+    },
+    "message_id": {"type": "string"},
+    "request_id": {"type": "string"},
+    "contract_version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+    "model_version": {"type": "string"},
+    "latency_ms": {"type": "number", "minimum": 0},
+    "top3": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["queue", "probability"],
+        "properties": {
+          "queue": {"type": "string"},
+          "probability": {"type": "number", "minimum": 0, "maximum": 1}
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"route": {"const": "needs_human"}}, "required": ["route"]},
+      "else": {
+        "required": ["label"],
+        "properties": {"label": {"type": "string"}, "confidence": {"type": "number"}}
+      }
+    }
+  ]
+}

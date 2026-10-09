@@ -1,0 +1,424 @@
+text,model_label,confidence,reason
+How do I locate my card?,cards,0.8089761161850367,abstain
+My card has not arrived yet.,cards,0.9932237995508505,random_audit
+How do I track my card?,cards,0.6799369186069698,abstain
+I still don't have my card after 2 weeks.  What should I do?,cards,0.64774469194137,abstain
+Why hasn't my card been delivered?,cards,0.9742679951711452,random_audit
+I think something went wrong with my card delivery as I haven't received it yet.,cards,0.7762089085438797,abstain
+Is there tracking info available?,account,0.4117988444499259,abstain
+Why won't my card show up on the app?,cards,0.8366633948058549,abstain
+How do I link to my credit card with you?,cards,0.8515838910893478,abstain
+The app doesn't show the card I received.,cards,0.7541730893026068,abstain
+Where do I need to go in the app to enter my card info?,cards,0.8044006800218156,abstain
+The exchange rate for my transaction last Saturday seems to have been wrong I got charged extra.  Please fix.,fees,0.9986052312127173,random_audit
+Why am I being charged more ?,fees,0.6135505799936821,abstain
+My statement has a dollar I have been charged showing up on it.,fees,0.8060457900815812,abstain
+I'm not okay with this fee on my statement.,fees,0.750665139875217,abstain
+There is a fee I don't recognize on my statement.,fees,0.6508568485067059,abstain
+I would like a refund on the extra pound I was charged.,fees,0.9976440577829284,random_audit
+Can you explain what this random $1 charge is?,fees,0.8090049641684642,abstain
+What is this $1 charge on my statement?,fees,0.8555418909093466,abstain
+Why does my statement have these extra charges?,fees,0.8267224723281343,abstain
+"I do not remember purchasing anything for 1£, and it is on my statement. Can you please tell me what that is about?",fees,0.5160100078087809,abstain
+Can you tell me why I noticed a $1 charge on my statement?,fees,0.7718843642736672,abstain
+When will the $1 transaction be credited to me?,transfers,0.7082180712732166,abstain
+There is an extra charge on my app that I was not told about or I was aware of!,fraud,0.5040425448930405,abstain
+"I am a new customer, and I happened to look at my app and there is a charge I am not familiar with.  Could you tell me why the extra charge is there?",fees,0.7078376471100339,abstain
+There is a transaction for $1 and I don't know why it was charged.,fees,0.6920348601797435,abstain
+"Can you help me with a weird charge?  It's a pound charge that never goes away from the statement view on the app I'm using.  It's not described as anything but ""Pending"", and that status has never changed during the last two days.",transfers,0.40648703195902564,abstain
+My transaction is still showing that is pending from my cash withdrawal.,cash,0.7329382546803808,abstain
+"Hey I tried to get some money out earlier but the machine didn't work. Now just saw the transaction still seems in progress! Can you please check what's going there, seems something is broken, I don't want to be charged for money that I haven't actually received!",transfers,0.4935466191377678,abstain
+I made a withdrawal from my account but it has not posted?,cash,0.7918671609050995,abstain
+I made a cash withdrawal but the pending status is taking forever.,cash,0.8408534762476887,abstain
+I have a pending transaction in my app. How is it still pending if I pulled the cash out from the ATM earlier?,cash,0.9352841591100329,random_audit
+Why does it say pending cash withdrawal on my statement?,cash,0.8119770908936367,abstain
+Where's accounting for my cash withdrawal?,cash,0.7868555264449425,abstain
+My account was charged for a withdraw I tried to make that was decline.,fraud,0.6452158719168267,abstain
+how long does it take to post atm with drawl,cards,0.437444026497722,abstain
+"What's a pending transaction? My card was declined at an ATM, but my account says it's still pending. Can I cancel the payment?",cash,0.6311489593635359,abstain
+"If I request that my funds be held, what currencies do you use?",transfers,0.7016748144816771,abstain
+I want to know how many different currencies my money can be in,fees,0.6099304202377779,abstain
+Which country's currency do you support?,fees,0.8563164639728784,abstain
+What countries can I travel to and have access to their currencies?,fees,0.4710552535414587,abstain
+my card was not in the mail again can you advise?,cards,0.8249838390269839,abstain
+"I live in the US, how long will it take for delivery?",cards,0.5079236951974925,abstain
+What is the difference between standard and express delivery?,transfers,0.5556596655001318,abstain
+May I choose when it's delivered?,cards,0.8338769157558874,abstain
+How fast can you deliver?,cards,0.7854468460862228,abstain
+Whats the delivery time to the United States?,cards,0.7266157067077006,abstain
+Send my card as soon as you are able to.,cards,0.8439239721376818,abstain
+How long does shipping take to get to a US destination?,cards,0.7492684330655773,abstain
+How long until my card is delivered?,cards,0.9930485330698454,random_audit
+I need it delivered by Saturday.,cards,0.7100732803397987,abstain
+What's the U.S. Delivery time?,cards,0.6145675238492161,abstain
+can I choose a date for delivery?,transfers,0.39305625709227127,abstain
+Can I have it be delivered at a certain time?,cards,0.8412036874825852,abstain
+where is theft-top option?,cash,0.8300785334870017,abstain
+How do I make sure I don't run out of money on my card while traveling?,fraud,0.5128350618919992,abstain
+Can I space out how often money is transferred along my travels?,transfers,0.7920549491174192,abstain
+My card broke.,cards,0.5824244262469717,abstain
+Can you please identify the problem with my bank card?,fraud,0.5955904212861921,abstain
+I think my card is broken,cards,0.6750212792898173,abstain
+My card was declined today when eating and I need to know what's wrong.,transfers,0.8336456216606943,abstain
+How can I resolve a problem where my card won't go through at all?,cards,0.8239855007083932,abstain
+I broke my card,fraud,0.5506129154599685,abstain
+"My card is broke, what do I do?",cards,0.6353816791946765,abstain
+Need help with my card. It's not working.,cards,0.8565623534167544,abstain
+I cannot use my card.,cards,0.8293762378651911,abstain
+My card suddenly quit working.,cards,0.7489721476880596,abstain
+I have tried to use my card several times and it does not work.,cards,0.39544660976336987,abstain
+My card doesn't accept any transaction at all. What's wrong??,cards,0.4422125700470256,abstain
+"Could it be that I deactivated my card, its not working?",cards,0.8509497691607986,abstain
+Can I get some money exchanged?,transfers,0.8577193143239839,abstain
+How would I use my money in a different country?,transfers,0.648036336233596,abstain
+Can am I able to exchange currencies?,fees,0.9886954698491673,random_audit
+"I think I want AUD and not GBP, can you help?",fees,0.8198419051481968,abstain
+I lost my card,fraud,0.8248208255546614,abstain
+Is a copy of the police report necessary for completing the report process?,transfers,0.450794158423479,abstain
+What should I do if I lost my card?,fraud,0.7081225440331204,abstain
+What should I do if my card is missing?,fraud,0.5437436621035915,abstain
+My card was taken from me,fraud,0.7249353158228719,abstain
+My card got lost.,fraud,0.8427600129415638,abstain
+I cannot find my credit card.,fraud,0.5777977465175779,abstain
+Are you able to locate my card?,cards,0.7508822777170374,abstain
+Can I open a bank account for my newborn baby?,account,0.7950178192243638,abstain
+Do you offer services for children to have money saving experience?,account,0.4385736956116018,abstain
+Can my 19 year old daughter open a savings account at the bank?,account,0.757717615183776,abstain
+How old does one have to be to have an account with the bank?,account,0.7695472676576872,abstain
+I used the wrong ping too many times and now the account is blocked.  How do I unblock?,transfers,0.7095924070861593,abstain
+I need help because I drunken blocked my card?,fraud,0.5294032621351926,abstain
+"My account is blocked, how do I log in now",account,0.7671257126632679,abstain
+Can you assist me with unblocking my PIN? I put it in wrong too many times.,cards,0.9540386553245185,random_audit
+"My card's frozen, what can I do?",cards,0.521002275985427,abstain
+My contanctless has stopped working,cards,0.8362350174231947,abstain
+"I don't know what's wrong, my contactless stopped working. Tried it in a few different places today and it didn't work in any of them.",cards,0.8108728086022531,abstain
+I tried to pay contactless at the bus today and it didn't work. Any ideas why?,cards,0.7556044182930857,abstain
+I've been unable to pay contactless with my card for over a week now. Is there a way to fix this issue?,cards,0.7493696073362467,abstain
+My contactless payments have not been completed successfully.,cards,0.8276787764948026,abstain
+For some reason my contactless has stopped working. I don't know what the problem is. What can I do?,cards,0.7526010449785527,abstain
+Why wouldn't the contactless payment work when I tried to pay at the bus today?,cards,0.7173265409532521,abstain
+"When I tried to pay for my bus ride, the contactless payment wouldn't work. How can I prevent this in the future?",cards,0.8060548788493956,abstain
+The NFC payment wouldn't work on the bus today. Help?,cards,0.6450316502604604,abstain
+what is the charges for new card?,cards,0.7721185353476234,abstain
+It didnt work when I tried to pay contactless at the bus today. Why?,cards,0.8448151041996841,abstain
+How can I fix a problem where contactless isn't working?,cards,0.9672461146990925,random_audit
+Do I need to make a regular payment before a contactless one?,cards,0.8233201514058086,abstain
+Should i reinstall the payment app?,transfers,0.4172828066763389,abstain
+I would like to refill my account using SWIFT.,fees,0.34165962153910956,abstain
+Is it possible to get a transfer from SWIFT?,transfers,0.6977128442281417,abstain
+Is a SWIFT transfer okay?,fees,0.7234106545401681,abstain
+"new customer and filling gas today, it's not working, the thing shows pending half an hour!",cash,0.6711921178028466,abstain
+there's a delay in my top-up,cash,0.9958053478171526,random_audit
+"Is there something wrong with your website? I tried topping up my account and it's been close to two hours now and it's still at ""pending"" for some reason. I just joined with you guys and this is the first attempt at this, so maybe I'm wrong, but shouldn't this be instant?",cash,0.48504522855218696,abstain
+"I tried topping up but my funds seem to be pending. I want to buy something right now, what do I do?",transfers,0.5090993584224424,abstain
+I made a mistake with a transaction!,transfers,0.706027142185277,abstain
+I want to go back on what I did this morning,cash,0.523226062718683,abstain
+Is there any limit to the amount I can add to a card at a time?,cards,0.7506929309591931,abstain
+Where is the money I pushed it's on my mobile app as being withdrawn.,fraud,0.48731962905768367,abstain
+I asked for $100 cash but only got $20?,cash,0.9951218608770874,random_audit
+Where is the money that I asked for? I asked for more than I got!,cash,0.8287449205967605,abstain
+"I show another charge on my card from when I used it, why?",fraud,0.7964549004380379,abstain
+"Why do I get charged additional fees on some payments, but not others?",fees,0.9758251090321534,random_audit
+I would appreciate that someone let me know when there is an extra charge for payments. I was checking the app earlier and saying a charge on one of my payments that was additional that no one made me aware of before.,fees,0.8250839158915232,abstain
+I made a card payment and a fee is showing up?,fees,0.7258706201699839,abstain
+So what items  actually come  with  extra  fees,fees,0.5169497124200546,abstain
+Someone needs to make me aware when there are extra charges for payments. I happened to be looking at the app earlier and noticed a charge associated to a payment that was extra that no one made me aware of before at all.,fees,0.8000872189807288,abstain
+Is using my card free?,cards,0.7961282686652881,abstain
+transaction failed?,cash,0.5530055860631188,abstain
+"I need support options, I want to top my card",cards,0.6114198525922192,abstain
+What currencies are accepted for adding money?,cards,0.8188406333033418,abstain
+What kind of currencies can I use to add money?,fees,0.6647876971357676,abstain
+Which cards do you guys support? I want to top up using my credit card.,cards,0.778196498183331,abstain
+"When adding money, what are the currencies you take?",fees,0.5664354034289676,abstain
+"I want to add money but don't know what currencies you accept, can you tell me?",cards,0.5195964288811316,abstain
+why wouldn't you support american express? its a card i like and use often and i don't want to get a different one,cards,0.7098876506105911,abstain
+Which credit or debit cards can I use to top up?,cards,0.7842521746890484,abstain
+Is my currency okay to add money with?,fees,0.5905857085003454,abstain
+What currencies or cards do you support for topping up?,cards,0.8853591457738604,random_audit
+Can you tell me where I can order a virtual card?,cards,0.9985431120245598,random_audit
+Can I use my card for payment all over the world?,cards,0.4754479083553958,abstain
+What stores can I sue my card?,transfers,0.5266153475807283,abstain
+Is there anywhere my card will not be accepted?,cards,0.7725760051467182,abstain
+What places will accept my card for payment?,cards,0.808995098786483,abstain
+What stores will take my credit card as payment?,cards,0.6529486121426872,abstain
+Is there any place I cannot use my card?,cards,0.7816821926221942,abstain
+Can I make online purchases with my card?,cards,0.6141686397006835,abstain
+What can I use my card to pay for?,cards,0.6535005586565479,abstain
+"Hi, i don't know what's going on i've just paid for my top up twice by accident can you help me get a refund please.",fraud,0.48823933472214304,abstain
+I put money into my account for the minimum balance but the application didn't accept.,cash,0.5767981431625233,abstain
+There appears to have been a reversion in my top up,cash,0.7840569938875727,abstain
+I think my top-up was cancelled.,cash,0.9984294689683083,random_audit
+I tryed to make a top-up with cryptocurrency but the payment was referted.,cash,0.7639804992211696,abstain
+I have paid money into my account but it doesn't show.,transfers,0.7029703153221973,abstain
+The balance on my account wasn't updated after I made a depost.,transfers,0.6475704160005604,abstain
+Where is my deposit?,cash,0.724951833015932,abstain
+My bank statement doesn't show the cash deposit I made recently.,cash,0.8267778704140852,abstain
+I submitted a cash deposit to my account but it hasn't posted yet.,cash,0.9950242707312011,random_audit
+I found an unauthorized card payment,fraud,0.8539030800338033,abstain
+I don't recall making that payment?,fraud,0.8338945820956368,abstain
+"I'm concerned about a payment that has recently been made on my card.  I do not recognize the name that the transaction went to, can you help me?",fraud,0.7433042001683342,abstain
+I have a payment listed in error.,fraud,0.7968024223177042,abstain
+I don't know where this transaction came from?,transfers,0.44902708060662755,abstain
+Somebody used my card to make a purchase,transfers,0.6931417722892649,abstain
+Some of my card payments look different than where I purchased products from. Why is that?,transfers,0.852555519044284,abstain
+I think there has been a purchase made that wasn't by me.,fraud,0.8357051723809058,abstain
+"I no longer live at my address on file, how do I change it?",account,0.7580754798838585,abstain
+Where can I go to modify my detail?,account,0.6212910240325064,abstain
+My address has changed. How do I report it?,account,0.722201991885981,abstain
+My address has updated and I need to change it.,account,0.8078833716040873,abstain
+How do I update my current residence details?,account,0.7659270817987954,abstain
+Should I just wait until the post office sends a change of address form?,transfers,0.4374869183897424,abstain
+What do I need to do to change the address on my account?,account,0.796413189791776,abstain
+Why is it asking me to verify my identity,account,0.9990497653038267,random_audit
+Why doesn't the app believe I am who I say I am?,account,0.5320263238420189,abstain
+what do i do if my verification failed,account,0.7845526100009867,abstain
+It is impossible to verify my identity,account,0.9995528278442004,random_audit
+The app doesn't know it's me.,account,0.8007491291772684,abstain
+app does not recognize me,fraud,0.5829236535942318,abstain
+The app will not let me into my account.,account,0.7312541576600791,abstain
+I can not get the app to know it is me.,account,0.7081172702317302,abstain
+The app doesn't recognize me.,fraud,0.482112374159113,abstain
+Why can't I see my PIN?,cards,0.9926891467395865,random_audit
+Is my PIN located on my account somewhere?,cards,0.8480318853530834,abstain
+Do I qualify for a visa card?,account,0.6915309280330159,abstain
+I'd rather get a Mastercard,cards,0.9867208711103935,random_audit
+I would prefer a visa card,cards,0.8522542598492822,abstain
+Am I allowed to use any card to make a payment?,transfers,0.6656873114886522,abstain
+I would like to apply for a visa card.,account,0.6582176778220099,abstain
+Is it possible to receive a Visa and a MasterCard?,cards,0.9943690244374915,random_audit
+What major card payments are accepted?,cards,0.7853460677251345,abstain
+WHERE IS MY MONEY I WAS USING MY CARD AND IT DISAPPEARED,fraud,0.7606162504473296,abstain
+What is the process for using my credit card to transfer money?,transfers,0.9258051640029228,random_audit
+How do I top up my card using your app? I'm new to this.,cash,0.7310547078404234,abstain
+Where's the money that got charged to my card? It's not showing up in my account balance,fraud,0.429019812364594,abstain
+Can I give my friends access to my account so they can top it up for me?,cash,0.8573292312294412,abstain
+How can someone add money to my account?,transfers,0.6112408475522532,abstain
+Are my friends able to add funds to my account?,cash,0.708014344865268,abstain
+My friends want to top up my account,cash,0.8272413347572175,abstain
+How many card payments can I use on a disposable card?,cards,0.8482554468835874,abstain
+"If I have more than one disposable card, can I make five payments on each of them?",cards,0.8268835687532045,abstain
+What is the maximum number of transactions I can make with one card?,cards,0.7670275713691258,abstain
+Is there a limit to how many transactions I can make on one disposable card?,cards,0.8215412371109203,abstain
+someone is using my account,fraud,0.5807568322809871,abstain
+Freeze my account it's been hacked.,fraud,0.7531019797070588,abstain
+Someone is using my account to do online shopping! Please freeze it asap,fraud,0.550564550336107,abstain
+How can I stop fraud on my account right now?,fraud,0.4710603709279032,abstain
+"I see random purchases to my account, was it hacked?",transfers,0.76632136747843,abstain
+How do I freeze my card using the app?,cards,0.6739904269458301,abstain
+My card has been compromised,fraud,0.732535615939288,abstain
+How do I freeze my account?,fraud,0.47010935985452074,abstain
+"If I feel someone has my card information, can I get a new card?",cards,0.5694091515352043,abstain
+I think someone has access to my card numbers that shouldn't.,fraud,0.9319396949088313,random_audit
+What do I do if I think someone managed to get my card information?,fraud,0.8054352299682055,abstain
+Which ATM's accept my card?,cash,0.7889502320414561,abstain
+Which ATMs accept this placard ?,cash,0.990095242958903,random_audit
+Which ATM's will accept my card?,cash,0.7345691274005254,abstain
+Can I get cash with this card anywhere?,cards,0.6765449142469029,abstain
+Where is the nearest bank machine?,cash,0.5664576994654493,abstain
+Where can I use this card at an ATM?,cash,0.6601110902046933,abstain
+Where can I find an ATM to use this card?,cash,0.6833978238450429,abstain
+Do you know the closest ATM?,cash,0.7651813002389184,abstain
+Can I use this card at an ATM?,cash,0.6378373815727558,abstain
+"im so mad right now. theres several charges that I think my x boyfriend made on my card. the companys on the website wouldn't refund me my money, they told me to contact my bank. DO something please.",fraud,0.5831576928784048,abstain
+someone stole my money,transfers,0.492909584994566,abstain
+"There was a transaction from two weeks ago from a business that I don't know. I'm fairly certain it wasn't me who made it, but is it an option to trace it to confirm?",fraud,0.8311691474183109,abstain
+"I am seeing a weird payment showing up that I know I did not make, how can I get it cancelled?",fraud,0.5087945576815751,abstain
+This Direct Debit payment may not be right.,fraud,0.5281094245586752,abstain
+Someone has taken my money and I don't know who,fraud,0.7224844364244736,abstain
+Something is wrong with my password.,account,0.8399967666556144,abstain
+I don't remember my code to get into the app.,account,0.626320046686382,abstain
+"I do not remember the code, what should I do?",fraud,0.7823193643427854,abstain
+I need help resetting my passcode to access my app.,account,0.9918525861934111,random_audit
+I forgot the code to access the app.,account,0.6631965949642881,abstain
+Can you help me reset my password?,account,0.8314643878132734,abstain
+What is the code I need to get into the app?,account,0.824736288329574,abstain
+Can you tell me why you won't let me get my own money out of the money machine? I know I used the right PIN.,cards,0.6430871937220345,abstain
+i tried to withdraw money from an atm and i was declined on front of my friends. Why did this happen?,cash,0.7131484047217387,abstain
+Why is there a pending transaction on my card?,transfers,0.5864768841608101,abstain
+How long do card transactions take to clear?,cards,0.5368015981310176,abstain
+what does pending mean?,transfers,0.7766550016354374,abstain
+"I was double charged, and the second charge is showing as ""pending"". How long will it be before I get my money back once the second charge has been refunded?",fraud,0.7326683637962906,abstain
+My phone is not on me.  How can I use the app?,fraud,0.8507841387184013,abstain
+My phone is not with me at the moment so I will not be able to access the app.,fraud,0.8465885766331344,abstain
+"lost phone, dont want others to access account",fraud,0.7724930923555744,abstain
+I was mugged and everything taken.  What do I do to protect my account?,fraud,0.8286945559465284,abstain
+"Someone attacked me yesterday and took my things, so I am unable to use the app.  I am in need of some help.",fraud,0.47884928081941014,abstain
+Can I still use the app if I switched phones?,cards,0.49390106379383686,abstain
+I was mugged yesterday and they took everything.  I can't access my app.  What are my next steps?,fraud,0.7642784241839358,abstain
+I got mugged yesterday and lost access to the app. I need to regain it.,fraud,0.8226688540835042,abstain
+"I wasn't charged the correct amount for an item I purchased, how can I fix this?",transfers,0.5510636698723326,abstain
+I want a refund because my package has been taking too long to arrive. How do I go about doing that?,transfers,0.9965752984721246,random_audit
+I bought this item and was charged the wrong amount can I get a refund?,transfers,0.5208330958584445,abstain
+"How can I fix my card, it got declined twice.",transfers,0.7405529087790836,abstain
+"Why would my transfer be declined? I've checked that I've put in all the right details, but it is still declined.",transfers,0.9968379091006855,random_audit
+My card is being declined online. Could you tell me what might be broken or wrong with the account?,transfers,0.7400014587359396,abstain
+"I was attempting to purchase a golf club off eBay yesterday, but my credit card was declined. I tried multiple times, and again this morning. Can you check into my card please?",transfers,0.7122509084598379,abstain
+I requested a refund and it is missing.,transfers,0.9990145623798453,random_audit
+I requested a refund from a merchant days ago but I do not see it in my account.,transfers,0.9972094305486654,random_audit
+My credit card was declined.,transfers,0.6748990949076147,abstain
+The new card that was just sent to me was declined multiple times yesterday when I tried to use it at a restaurant to pay for my dinner.  I am really disappointed  and embarrassed that my card was denied when I tried to use it to pay for my friend's birthday dinner.,transfers,0.6176562994767586,abstain
+My new card keeps getting declined. I was very excited to use it for the first time today. Why is this doing this?,transfers,0.6825581911074541,abstain
+Why is my debit card being declined when I have money?,fraud,0.6830501072404902,abstain
+My card was not accepted.,transfers,0.7546329156936575,abstain
+"My card payment didn't work, can you help?",transfers,0.9973103307287261,random_audit
+"My card was rejected at the store for some reason, can you look into this for me?",transfers,0.8420407262048679,abstain
+"I finally got my new card and was very excited to use it today. However, my payment kept declining. What is happening?",transfers,0.8426431582130505,abstain
+My card didn't work in one of the shops.,cards,0.4491459935563196,abstain
+The transfer is coming up as pending the payment is due today. Will I be charged a fee?,fees,0.7678626269696064,abstain
+"i want to close an account but im not sure about setting up a new one in the future, what do you recommend",account,0.47964029036731465,abstain
+My account needs to be deleted.,account,0.822361239921253,abstain
+"please delete my account, your services are not up to par.",account,0.8566140813605345,abstain
+"The service of this company sucks, I need to terminate my account.",transfers,0.6191944105691494,abstain
+"Your service is terrible,.  Delete my account,",account,0.8129284717602396,abstain
+"Please delete my account, this company is not working for me!",account,0.7166662359015656,abstain
+This company sucks! Can you terminate my account?,transfers,0.4860774404309707,abstain
+"What do I do if an ATM ""stole"" my card?",cash,0.672016381389103,abstain
+I was retrieving money and my card wouldn't remove.,cards,0.523407920643548,abstain
+What do I do since the machine swallowed my card. I need one.,cards,0.5441742943749799,abstain
+HOw do I get my card back after the ATM has pulled it in?,cards,0.8269088917425356,abstain
+Is there a way I can get my ATM card back from the machine?,cards,0.5426569272071212,abstain
+I think the atm ate my card.,cards,0.5078186501225317,abstain
+The ATM didn't give me the card back!,cards,0.8504588422422509,abstain
+How can I get my card out of the damn ATM?,cards,0.6977051996312744,abstain
+The ATM machine stole my card.,cash,0.5895791338938599,abstain
+My card was confiscated by an ATM. How do I get my card back?,cards,0.7406074425559834,abstain
+What do I do if the ATM ate my card?,cards,0.5858353311020182,abstain
+ATM still has my card,cards,0.8414147083083817,abstain
+What do I do if an ATM ate my card?,cards,0.46500469318458887,abstain
+What happens if the ATM doesn't give me back my card?,cards,0.6531979883888969,abstain
+I can't pull my card out of the ATM. Help me.,cash,0.7064839240469923,abstain
+I have a problem!  The ATM stole my card!,fraud,0.627171665315051,abstain
+Why would an ATM swallow my card?,cash,0.4544571772510736,abstain
+My card was taken by the ATM.,cards,0.5443888953938472,abstain
+The stupid machine just swallowed my card!! I need a new one ASAP,cards,0.8231796640198984,abstain
+How do I retrieve a trapped card from a ATM?,cards,0.7723476738193802,abstain
+I was getting cash and can't get my card back.,cards,0.6268644238192946,abstain
+"If my card is trapped in the ATM, what do I do?",cards,0.8380741342623834,abstain
+My card has been swallowed by an ATM,cards,0.5908631007579553,abstain
+I was taking out funds and was unable to regain my card.,fraud,0.6325050127391548,abstain
+The ATM at Metro bank on High St. Kensington didn't return my card. What should I do now that the bank is closed?,cards,0.8398035585406488,abstain
+The ATM won't give back my card,cards,0.8126534099016108,abstain
+I was at an ATM and it swallowed my card.,cash,0.6069418796229483,abstain
+WTF??? I tried to withdraw some money at a Metro bank on High St. Kensington and without any notice it disappeared in the machine. The bank was already closed so I couldn't do anything. How do I get it back?,cash,0.8492216354635064,abstain
+"I've just come back from an eating holiday in the USA and Canada and have SO many pending and duplicated transactions on my account.  I think there is something wrong, can you look in to it please?",fraud,0.6263281815461411,abstain
+Why am I being charged twice fro a restaurant?,fraud,0.9146112558684357,random_audit
+I didn't buy this twice,fraud,0.8181609119590162,abstain
+Why would I be charged more than once for the same transaction?,fraud,0.8404866164427361,abstain
+It appears that I am being double charged for some items that I have purchased this past week.  Please review and correct.,fraud,0.7770550098488503,abstain
+A transaction is repeated several times on my account.,transfers,0.557297036301769,abstain
+My card has been charged two separate times for a single transaction.,fraud,0.9903971847106501,random_audit
+I see that I have been charged multiple times for the same transaction.,fraud,0.9984557031235913,random_audit
+Can I find the origination of my funds?,account,0.5276175491173104,abstain
+I need my funds verified.,account,0.7133693021625008,abstain
+I need a fast transfer from China?  How fast will it be?,transfers,0.968478485052296,random_audit
+How many days does it take until funds are in my account?,cash,0.8028447439227293,abstain
+How long until the money is in my account?,transfers,0.530792320665211,abstain
+How long does it take for funds to come through the US to my account?,transfers,0.844678798395266,abstain
+How many days until the money will be in my account?,cash,0.6823533066645924,abstain
+How long does a funds transfer take from one back to another?,transfers,0.9978946724047261,random_audit
+How long is it going to take for my funds to show in my account?,cash,0.5851527380595353,abstain
+My credit card cancelled a payment for a purchase.,transfers,0.5378665012181859,abstain
+I have a payment listed as cancelled.,transfers,0.9764099366920881,random_audit
+"There must be an issue, why has my card been cancelled?",transfers,0.8543757202910364,abstain
+"Hi, I would like to file a claim for an inquiry. I am a frequent customer of the company in question and have never had any issue with my purchases, payments, or otherwise. However, the price deducted for an item I purchased a couple of weeks ago has been returned to my checking account. Was there an issue with my payment? The item has already been delivered to me.",transfers,0.6916029391663899,abstain
+Can you please help me with this exchange?  I am trying to get crypto and the app won't let me.,transfers,0.7525818927363812,abstain
+"Hey I want to buy some crypto but the app doesn't allow me to! What's the issue, I really want to exchange this",transfers,0.8182283910859974,abstain
+What's the deal with no cryptocurrency on your app?,fees,0.49930301512358166,abstain
+"I want to buy cryptocurrency, but your app doesn't let me. Why?",transfers,0.3863048001989236,abstain
+I had to pay in order to do a transfer,fees,0.8133034745753209,abstain
+"Hi,  Please help me, as i have transferred some amount but receiver did not get the same amount. He received a bit less. Due to this again i need to transfer the difference.   I have transferred money but beneficiary's account is credited with less amount. Now i have transfer the difference of the amount. I think there is some issue, could you please look into this.",transfers,0.7953974479085183,abstain
+I was charged more when I transferred!,fees,0.7931501467087382,abstain
+I need someone to alert me as to what's going on. I had transferred an amount but the receiver is saying that the amount is somewhat less than what I sent over. I now have to make another transfer to make up the difference.,transfers,0.8319879562918794,abstain
+In the past month I often used this account to manage payments for my new holiday villa. Now all of a sudden your fees have increased exorbitantly! Don't you have a rewards programme for frequent users?,fees,0.6171506320217787,abstain
+I transferred money and was charged and want to know why.,fees,0.8371550359703863,abstain
+How can I get paid in a different currency?,transfers,0.8166732012132387,abstain
+How can someone send me money?,transfers,0.9767340449808981,random_audit
+Is it possible for me to get money out in a different currency?,fees,0.5991844274683941,abstain
+How do people send me money?,transfers,0.9541930371189314,random_audit
+Do I need to establish I am paid in GBP before a transfer?,transfers,0.7616309822543726,abstain
+"Salary in GBP has been received, does it need to be configured elsewhere?",cards,0.43533108896127265,abstain
+How do I deposit my paycheck to this account?,transfers,0.694619510234429,abstain
+What if I need my salary in a different currency?,transfers,0.9884488982781772,random_audit
+Do you know if I can use this for my salary?,transfers,0.834513892702405,abstain
+How do I get my paycheck through this?,transfers,0.7984136507809982,abstain
+Can I get paid in a different currency?,transfers,0.6594125768039728,abstain
+Is my salary eligible for this?,transfers,0.7701326500064772,abstain
+Can I get my paycheck through here?,transfers,0.8181797228124673,abstain
+"I'm out of money, can I add money with my bank?",transfers,0.4302175801243807,abstain
+Can I add funds to the card directly from my bank account?,cash,0.6605701772820449,abstain
+I NEED TO KNOW HOW TO TRANSFER MONEY INTO MY BANK ACCOUNT. PLEASE HELP,transfers,0.2684583599830262,abstain
+I would like to transfer some money from my other bank account into this one.,transfers,0.9971427726572089,random_audit
+What methods can I use to add money to my account?,cash,0.6350696401061587,abstain
+CAN YOU EXPLAIN HOW TO TRANSFER MONEY INTO MY  ACCOUNT FOR ME?,fees,0.49921232213534034,abstain
+Can I use a bank transfer to refill my account?,transfers,0.9800507666005327,random_audit
+I want to order another crad,cards,0.747848029282656,abstain
+Is there a fee for extra cards?,cards,0.7317403989884723,abstain
+Can I have a card after my first one?,cards,0.8047060877198059,abstain
+I'd like to have another card,cards,0.8038324161943128,abstain
+"If I need more cards, are there any fees?",cards,0.9613472906173773,random_audit
+Can I get a spare card for someone else to use?,cards,0.846810865240236,abstain
+"My daughter would like a card as well, how can we make this happen?",cards,0.8038453294531764,abstain
+Can i have a card to my daughter?,account,0.6156557351639059,abstain
+How can I get a second card for my daughter?,cards,0.771543210533116,abstain
+When trying to get more than one card is there a extra amount that needs to be paid?,fraud,0.40669866446123093,abstain
+My daughter needs a card. Can I give her one of mine that's linked to my account?,cards,0.6250133601257734,abstain
+"My child needs a card, how can I add them to the account I currently have?",cards,0.6197283015967506,abstain
+How do I pay by check?,transfers,0.47667969520185194,abstain
+What can I pay with? Does cash work?,cards,0.5186259830118759,abstain
+Can I submit a check or cash payment?,cash,0.8135155064651077,abstain
+Do you accept checks?,cash,0.8014678113566616,abstain
+Do you ship cards to where I live?,cards,0.8713467443400329,random_audit
+How can I get a real-life card of my own?,cards,0.6964780238161301,abstain
+Why is my virtual card is being declined?,cards,0.8530724665938457,abstain
+Why was my virtual card declined when attempting to setup automatic billing?,cards,0.8537698382452853,abstain
+My card is just not working at this time.,cards,0.8379697157127841,abstain
+My transaction was just declined when I was using my disposable virtual card. What can I do?,cards,0.8081930587686483,abstain
+I was trying to use my virtual card at a merchant and it was rejected. How can I fix this?,cards,0.6071073991627679,abstain
+I made a withdraw from the ATM this past holiday and it seems like a was charged too much. If I would have   known about these charges I wouldn't have made a withdraw.,fees,0.41176770755056313,abstain
+"I need the right foreign money, at the right rate, at ATMs, when I go abroad.",fees,0.5874282425607183,abstain
+My ecchange rate was wrong for a cash transaction.,fees,0.816169564694178,abstain
+The see the rate applied to my transaction was wrong at the atm.,fees,0.7641295731404838,abstain
+I used the ATM machine to get money out for Holiday shopping and saw the outrageous charges. Why is that? I would not have used the ATM if I had known!,cash,0.6452067448352434,abstain
+The cash withdrawal exchange rate is not correct.,fees,0.9999371065729464,random_audit
+Can i get a throw away card,cards,0.8399212399035558,abstain
+please tell me why my top-up failed.,cash,0.9972724223296137,random_audit
+I had cash transferred but the balance did not change.,transfers,0.8375702249035947,abstain
+My account balance has not gone up even though I just transferred money into it,cash,0.5692922005340446,abstain
+I just lost my wallet and I see that they are already withdrawing money from my account. How can I stop this?,fraud,0.5343958467714808,abstain
+"I didn't get cash from an ATM, but the app says I did",cash,0.75352636136201,abstain
+"I didn't get cash from an ATM, but according to the app a transaction was made when i didn't make it.",fraud,0.6445126763189821,abstain
+The app said I withdrew cash at an ATM and I didn't,fraud,0.5488903283735851,abstain
+My account has a weird withdrawal.,fraud,0.6781105145205282,abstain
+I'm unsure of a withdrawl in my statement.,fraud,0.8481967380449364,abstain
+"It looks like someone else withdrew cash from my account, can you help?",fraud,0.5949158353658114,abstain
+How do I cancel my card? There are charges on my account that I didn't make.,fraud,0.9953698095650984,random_audit
+"There is an error, the app says I made an ATM withdrawal and I didn't.",fraud,0.7788923866573125,abstain
+"Can anyone help me, I lost my wallet and they've started withdrawing from my account.",fraud,0.7208733005744932,abstain
+"My work sends me all over the world, can I get a discount for all the money I have to exchange?",transfers,0.6584133090861888,abstain
+"If I want to exchange currency, will there be extras?",fees,0.998594531193889,random_audit
+how much you charge for exhcange,fees,0.9949873732437727,random_audit
+Is there a charge for a foreign currency exchange?,fees,0.9999843788976103,random_audit
+i was charged when i used a us issued card. why and what cards are free to use to add money,fraud,0.575396730476584,abstain
+How much does it cost to top up by card?,fees,0.7773426458041077,abstain
+I want to use a European bank card for a top up. Must I pay?,fees,0.5492805241026715,abstain
+Does topping up my card have a fee?,fees,0.9523402550976344,random_audit
+Is it okay to use a bank card to top up,cards,0.5133167674878792,abstain
+Can I top up using an international card,cash,0.5848298055298048,abstain
+WHAT CAN I DO AFTER THE CARD MISSING,cash,0.5076688379795901,abstain
+I tried activating my bill of fare and it didn't workplace,transfers,0.5895084577255757,abstain
+"Hi, I am calling about a recent transaction that has happened on my account.  I recently went to the ATM, and tried to make a withdrawal on my account.  I just happened to check my transaction slip and noticed a fee for my withdrawal.  How can I resolve this, I didn't know fees were charged for this type of action.",fraud,0.6058368500371257,abstain
+Is there a limit on how much I can withdraw from my account without being charged?,fees,0.7377363815874824,abstain
+Was charged an ATM fee despite it being a small withdrawal on the 1st day of the month. I thought I was allowed 200 per month?,fees,0.8101406444681888,abstain
+"When I got cash, I'm pretty sure there was a glitch that overcharged me.",fees,0.4398259548795167,abstain
+"in china, need new card",cards,0.5978720779751763,abstain
+Can I use the system Google Pay for top-ups?,cards,0.8398622992343965,abstain
+Does Google Play have an app to Top up?,cards,0.8777421195254685,random_audit
+is apple pay costly?,cards,0.7623070635136237,abstain
+can google pay be used to make a top-up,cards,0.8096054833051577,abstain
+What is needed to prove my identity?,account,0.9994987156815898,random_audit
+What's the process for ID verification?,account,0.8016975580520486,abstain
+do the details of my profile have to match my documents,account,0.7940891878212786,abstain
+"Please help me get a new card, I reside in the United States.",account,0.5588308096156948,abstain
+From what countries can I use this product?,account,0.5627969887515409,abstain
+"I would like to receive and use the card in Europe, is that possible?",cards,0.8143153401913177,abstain
+In what countries do you do business?,account,0.8589464402603171,abstain
